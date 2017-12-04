@@ -43,7 +43,7 @@ class ContentExpirator extends Controller {
 		} );
 	}
 	public function uninstall() {
-		$migrator = new DBMigrator ( "module/valid_from_to", ModuleHelper::buildRessourcePath ( "valid_from_to", "sql/down" ) );
+		$migrator = new DBMigrator ( "module/content_expirator", ModuleHelper::buildRessourcePath ( "content_expirator", "sql/down" ) );
 		$migrator->rollback ();
 	}
 	public function savePost() {
