@@ -1,0 +1,9 @@
+{
+	"id": "content_expirator",
+	"version": "0.1",
+	"description": "Content Expirator",
+	"categories": [
+		"tools"
+	],
+	"compatible_from": "2018.2"
+}

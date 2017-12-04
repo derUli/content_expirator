@@ -1,0 +1,27 @@
+{
+	"version": "1.0",
+	"source": "extend",
+	"embed": false,
+	"shy": false,
+	"main_class": "ContentExpirator",
+	"custom_acl": [
+		"content_expirator",
+		"content_expirator_edit"
+	],
+	"admin_permission": "content_expirator",
+	"controllers": {
+		"ContentExpirator": "controllers/ContentExpirator.php"
+	},
+	"objects": {
+		"ContentWithExpiration": "objects/ContentWithExpiration.php"
+	},
+	"actions": {
+		"content_expirator_edit": "templates/form.php"
+	},
+	"action_permissions": {
+		"content_expirator_edit": "content_expirator_edit"
+	},
+	"controller_function_permissions": {
+		"ContentExpirator::savePost": "content_expirator_edit"
+	}
+}
