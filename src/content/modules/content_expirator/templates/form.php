@@ -1,9 +1,9 @@
 <?php
-$id = Request::getVar ( "id", 0, "int" );
-$content = new ContentWithExpiration ( $id );
-if ($content->getID ()) {
-	$realContent = $content->getRealContent ();
-	?>
+$id = Request::getVar("id", 0, "int");
+$content = new ContentWithExpiration($id);
+if ($content->getID()) {
+    $realContent = $content->getRealContent();
+    ?>
 <?php echo ModuleHelper::buildMethodCallForm("ContentExpirator", "save", array("id"=>$id));?>
 <p>
 	<strong><?php translate("title");?></strong><br />
@@ -15,7 +15,7 @@ if ($content->getID ()) {
 </p>
 <p>
 	<strong><?php translate("enabled");?></strong><br />
-	<?php ($content->getActive() ? translate("yes") : translate("no,"));?>
+	<?php ($content->getActive() ? translate("yes") : translate("no"));?>
 </p>
 <p>
 	<strong><?php translate("valid_from");?></strong><br /> <input
@@ -32,8 +32,7 @@ if ($content->getID ()) {
 <?php echo ModuleHelper::endForm();?>
 
 <?php
-
 } else {
-	Request::javascriptRedirect ( ModuleHelper::buildAdminURL ( "content_expirator" ) );
+    Request::javascriptRedirect(ModuleHelper::buildAdminURL("content_expirator"));
 }
 ?>

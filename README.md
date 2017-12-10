@@ -13,4 +13,7 @@ Allows to set a timespan for every page. The page is only enabled while this tim
 5. Confirm installation
 
 ## Usage help
-[...]
+1. "Packages" > "content_expirator > "open"
+2. Click "Edit" Icon to edit expiration date from a page
+3. Set "Valid from" and "Valid until".
+4. Click "Save"
