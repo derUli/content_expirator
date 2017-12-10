@@ -5,5 +5,8 @@
 	"categories": [
 		"tools"
 	],
-	"compatible_from": "2018.1.1"
+	"compatible_from": "2018.1.1",
+	"dependencies": [
+		"better_cron"
+	]
 }
