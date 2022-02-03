@@ -27,8 +27,8 @@ $canEdit = $acl->hasPermission ( $permissions ["content_expirator_edit"] );
 			<td><?php esc($dataset->title);?></td>
 			<td><?php esc(getLanguageNameByCode($dataset->language));?></td>
 			<td class="hide-on-mobile"><?php ($dataset->active ? translate("yes") : translate("no"));?></td>
-			<td class="hide-on-mobile"><?php esc($contentExpiration->getValidFrom() ? strftime("%x %R", $contentExpiration->getValidFrom()) : "-");?></td>
-			<td class="hide-on-mobile"><?php esc($contentExpiration->getValidUntil() ? strftime("%x %R", $contentExpiration->getValidUntil()) : "-");?></td>
+			<td class="hide-on-mobile"><?php esc($contentExpiration->getValidFrom() ? PHP81_BC\strftime("%x %R", $contentExpiration->getValidFrom()) : "-");?></td>
+			<td class="hide-on-mobile"><?php esc($contentExpiration->getValidUntil() ? PHP81_BC\strftime("%x %R", $contentExpiration->getValidUntil()) : "-");?></td>
 						<?php if($canEdit){?>
 			
 			<td class="text-center"><a
